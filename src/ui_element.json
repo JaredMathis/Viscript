@@ -1,0 +1,32 @@
+{
+    "type": "function",
+    "name": "ui_element",
+    "variables": [
+        {
+            "type": "function_variable",
+            "name": "parent",
+            "input": true
+        },
+        {
+            "type": "function_variable",
+            "name": "element_type",
+            "input": true
+        },
+        {
+            "type": "function_variable",
+            "name": "element",
+            "output": true
+        }
+    ],
+    "root": {
+        "type": "steps",
+        "value": [
+            {
+                "type": "code",
+                "value": "element=document.createElement(element_type);\nparent.appendChild(element)"
+            }
+        ]
+    },
+    "tests": [
+    ]
+}
