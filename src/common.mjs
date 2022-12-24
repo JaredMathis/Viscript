@@ -22,6 +22,9 @@ export function list_single(list) {
 export function string_is(s) {
     return type_same(s, '');
 }
+export function array_is(s) {
+    return type_same(s, []);
+}
 export function type_same(a,b) {
     return typeof(a) === typeof(b);
 }
