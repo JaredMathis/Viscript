@@ -1,4 +1,4 @@
-import { assert, eval_global, file_json_open, identifier_is } from "./common.mjs";
+import { assert, eval_global, file_json_open, identifier_is, list_first as list_single } from "./common.mjs";
 import { compile } from "./compile.mjs";
 
 let files = ['add', 'number_1', 'number_2', 'number_3'];
@@ -19,7 +19,20 @@ for (let parsed of parseds) {
             assert(identifier_is(input.name));
             let value_get = eval_global(input.name);
             let input_vars = {};
-            test_vars[name] = value_get(input_vars);
+            value_get(input_vars);
+            test_vars[name] = input_vars[list_single(Object.keys(input_vars))];
+        }
+        let test_function = eval_global(parsed.name);
+        test_function(test_vars);
+        for (let name in test.outputs) {
+            let output = test.outputs[name];
+            assert(output.type === 'test_variable');
+            assert(identifier_is(output.name));
+            let value_get = eval_global(output.name);
+            let output_vars = {};
+            value_get(output_vars);
+            console.log({test_vars,output_vars})
+            assert(test_vars[name] === output_vars[list_single(Object.keys(output_vars))])
         }
     }
 }
