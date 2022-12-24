@@ -80,6 +80,90 @@
                         "name": "style_value2"
                     }
                 }
+            },
+            {
+                "type": "string",
+                "output": "style_name3",
+                "value": "border-radius"
+            },
+            {
+                "type": "string",
+                "output": "style_value3",
+                "value": "1.5vh"
+            },
+            {
+                "type": "call",
+                "name": "ui_element_style",
+                "inputs": {
+                    "element": {
+                        "type": "call_variable",
+                        "name": "element"
+                    },
+                    "style_name": {
+                        "type": "call_variable",
+                        "name": "style_name3"
+                    },
+                    "style_value": {
+                        "type": "call_variable",
+                        "name": "style_value3"
+                    }
+                }
+            },
+            {
+                "type": "string",
+                "output": "style_name4",
+                "value": "padding"
+            },
+            {
+                "type": "string",
+                "output": "style_value4",
+                "value": "0.75vh"
+            },
+            {
+                "type": "call",
+                "name": "ui_element_style",
+                "inputs": {
+                    "element": {
+                        "type": "call_variable",
+                        "name": "element"
+                    },
+                    "style_name": {
+                        "type": "call_variable",
+                        "name": "style_name4"
+                    },
+                    "style_value": {
+                        "type": "call_variable",
+                        "name": "style_value4"
+                    }
+                }
+            },
+            {
+                "type": "string",
+                "output": "style_name5",
+                "value": "margin-bottom"
+            },
+            {
+                "type": "string",
+                "output": "style_value5",
+                "value": "0.5vh"
+            },
+            {
+                "type": "call",
+                "name": "ui_element_style",
+                "inputs": {
+                    "element": {
+                        "type": "call_variable",
+                        "name": "element"
+                    },
+                    "style_name": {
+                        "type": "call_variable",
+                        "name": "style_name5"
+                    },
+                    "style_value": {
+                        "type": "call_variable",
+                        "name": "style_value5"
+                    }
+                }
             }
         ]
     },
