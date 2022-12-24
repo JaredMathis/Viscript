@@ -11,7 +11,7 @@ function compile_function(parsed) {
     let vars_dot = "vars.";
     return `
 async function ${parsed.name}(vars) {
-    let ${parsed.variables.map(v => v.name).join(", ")};
+    ${parsed.variables.length ? "let" : ""} ${parsed.variables.map(v => v.name).join(", ")};
     ${compile_function_variables_assign(parsed.variables, 'input', '', vars_dot)};
     let _call;
     ${compile_function_root(parsed.root)};
@@ -66,10 +66,12 @@ export async function load(file_get) {
         "ui_element_text",
         "ui_element",
         "ui_element_style",
+        "ui_element_on_click",
         "ui_element_width_full",
         "ui_button",
         "property_set",
         "property_get",
+        "print"
     ];
     let parseds = [];
     for (let f of files) {

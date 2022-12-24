@@ -14,6 +14,11 @@
         },
         {
             "type": "function_variable",
+            "name": "on_click",
+            "input": true
+        },
+        {
+            "type": "function_variable",
             "name": "button",
             "output": true
         }
@@ -67,6 +72,20 @@
                     "element": {
                         "type": "call_variable",
                         "name": "button"
+                    }
+                }
+            },
+            {
+                "type": "call",
+                "name": "ui_element_on_click",
+                "inputs": {
+                    "element": {
+                        "type": "call_variable",
+                        "name": "button"
+                    },
+                    "on_click": {
+                        "type": "call_variable",
+                        "name": "on_click"
                     }
                 }
             }

@@ -10,7 +10,7 @@
         },
         {
             "type": "function_variable",
-            "name": "hello",
+            "name": "new_function",
             "variable_type": "string"
         }
     ],
@@ -19,8 +19,8 @@
         "value": [
             {
                 "type": "string",
-                "output": "hello",
-                "value": "Hello, World"
+                "output": "new_function",
+                "value": "New Function"
             },
             {
                 "type": "call",
@@ -32,8 +32,33 @@
                     },
                     "text": {
                         "type": "call_variable",
-                        "name": "hello"
+                        "name": "new_function"
+                    },
+                    "on_click": {
+                        "type": "call_variable",
+                        "name": "new_function_on_click"
                     }
+                }
+            },
+            {
+                "type": "function",
+                "name": "new_function_on_click",
+                "variables": [
+                ],
+                "root": {
+                    "type": "steps",
+                    "value": [
+                        {
+                            "type": "call",
+                            "name": "print",
+                            "inputs": {
+                                "value": {
+                                    "type": "call_variable",
+                                    "name": "new_function"
+                                }
+                            }
+                        }
+                    ]
                 }
             }
         ]
