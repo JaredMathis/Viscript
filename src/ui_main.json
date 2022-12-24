@@ -24,7 +24,7 @@
             },
             {
                 "type": "call",
-                "name": "button",
+                "name": "ui_button",
                 "inputs": {
                     "parent": {
                         "type": "call_variable",
