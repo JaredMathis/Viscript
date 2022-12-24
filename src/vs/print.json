@@ -1,0 +1,15 @@
+{
+    "type": "function",
+    "name": "print",
+    "variables": [
+        {
+            "name": "value",
+            "type": "any",
+            "input": true
+        }
+    ],
+    "root": {
+        "type": "code",
+        "value": "console.log(value)"
+    }
+}
