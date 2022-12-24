@@ -46,7 +46,30 @@
                         "name": "ui_screen_function_new"
                     }
                 }
-            }        
+            },
+            {
+                "type": "string",
+                "output": "open_function",
+                "value": "Open Function"
+            },
+            {
+                "type": "call",
+                "name": "ui_button",
+                "inputs": {
+                    "parent": {
+                        "type": "call_variable",
+                        "name": "body"
+                    },
+                    "text": {
+                        "type": "call_variable",
+                        "name": "open_function"
+                    },
+                    "on_click": {
+                        "type": "call_variable",
+                        "name": "ui_screen_empty"
+                    }
+                }
+            }    
         ]
     },
     "tests": [
