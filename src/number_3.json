@@ -1,0 +1,19 @@
+{
+    "type": "function",
+    "name": "number_3",
+    "variables": [
+        {
+            "type": "function_variable",
+            "name": "n",
+            "variable_type": "number",
+            "output": true
+        }
+    ],
+    "root": {
+        "type": "number",
+        "value": "3",
+        "output": "n"
+    },
+    "tests": [
+    ]
+}

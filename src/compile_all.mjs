@@ -1,7 +1,7 @@
 import { assert, file_json_open, identifier_is } from "./common.mjs";
 import { compile } from "./compile.mjs";
 
-let files = ['add', 'number_1', , 'number_2', , 'number_3'];
+let files = ['add', 'number_1', 'number_2', 'number_3'];
 let parseds = [];
 for (let f of files) {
     let parsed = await file_json_open(`./src/${f}.json`);

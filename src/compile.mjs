@@ -1,5 +1,5 @@
 import { assert } from "console";
-import { identifier_is, string_is } from "./common.mjs";
+import { digit_is, identifier_is, letters_all_generic, string_is } from "./common.mjs";
 
 export function compile(parsed) {
     return compile_function(parsed);
@@ -28,6 +28,12 @@ function compile_function_root(root) {
     let result = eval("compile_" + root.type)(root);
     assert(string_is(result));
     return result;
+}
+
+function compile_number(root) {
+    assert(identifier_is(root.output));
+    assert(letters_all_generic(root.value, digit_is));
+    return `${root.output}=${root.value}`;
 }
 
 function compile_code(root) {
