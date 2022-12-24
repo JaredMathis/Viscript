@@ -57,7 +57,13 @@ function compile_code(root) {
 }
 
 export async function load(file_get) {
-    let files = ['add', 'number_1', 'number_2', 'number_3', "ui_main"];
+    let files = [
+        'add', 
+        'number_1', 
+        'number_2', 
+        'number_3', 
+        "ui_main"
+    ];
     let parseds = [];
     for (let f of files) {
         let parsed = await file_get(f);
