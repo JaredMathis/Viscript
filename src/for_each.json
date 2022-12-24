@@ -1,0 +1,27 @@
+{
+    "type": "function",
+    "name": "for_each",
+    "variables": [
+        {
+            "type": "function_variable",
+            "name": "list",
+            "input": true
+        },
+        {
+            "type": "function_variable",
+            "name": "on_each",
+            "input": true
+        }
+    ],
+    "root": {
+        "type": "steps",
+        "value": [
+            {
+                "type": "code",
+                "value": "for (let i of list) {\nawait on_each({item:i});\n}"
+            }
+        ]
+    },
+    "tests": [
+    ]
+}
