@@ -31,7 +31,6 @@ for (let parsed of parseds) {
             let value_get = eval_global(output.name);
             let output_vars = {};
             value_get(output_vars);
-            console.log({test_vars,output_vars})
             assert(test_vars[name] === output_vars[list_single(Object.keys(output_vars))])
         }
     }
