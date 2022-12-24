@@ -25,7 +25,7 @@ export function character_is(s) {
     return string_is(s) && s.length === 1;
 }
 export function letters_has(s) {
-    return s.toLower() !== s.toUpper();
+    return s.toLowerCase() !== s.toUpperCase();
 }
 export function letter_is(s) {
     return character_is(s) && letters_has(s);
