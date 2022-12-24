@@ -62,6 +62,7 @@ export async function load(file_get) {
         'number_1', 
         'number_2', 
         'number_3',
+        'if_else',
         'for_each',
         'list_add',
         'list_new', 
