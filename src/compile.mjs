@@ -6,5 +6,6 @@ export function compile(parsed) {
 
 function compile_function(parsed) {
     assert(parsed.type === 'function');
+    assert(letter);
 }
 
