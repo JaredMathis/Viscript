@@ -34,7 +34,7 @@
                         "type": "call_variable",
                         "name": "parent"
                     },
-                    "text": {
+                    "element_type": {
                         "type": "call_variable",
                         "name": "element_type"
                     }

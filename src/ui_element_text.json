@@ -17,6 +17,11 @@
         "type": "steps",
         "value": [
             {
+                "type": "string",
+                "output": "innerHTML",
+                "value": "innerHTML"
+            },
+            {
                 "type": "call",
                 "name": "property_set",
                 "inputs": {

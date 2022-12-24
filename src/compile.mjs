@@ -62,7 +62,11 @@ export async function load(file_get) {
         'number_1', 
         'number_2', 
         'number_3', 
-        "ui_main"
+        "ui_main",
+        "ui_element_text",
+        "ui_element",
+        "ui_button",
+        "property_set",
     ];
     let parseds = [];
     for (let f of files) {
