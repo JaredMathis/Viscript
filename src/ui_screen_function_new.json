@@ -127,6 +127,34 @@
                         },
                         {
                             "type": "call",
+                            "name": "list_add",
+                            "inputs": {
+                                "list": {
+                                    "type": "call_variable",
+                                    "name": "validators"
+                                },
+                                "item": {
+                                    "type": "call_variable",
+                                    "name": "string_letters_numbers_or_underscore"
+                                }
+                            }
+                        },
+                        {
+                            "type": "call",
+                            "name": "list_add",
+                            "inputs": {
+                                "list": {
+                                    "type": "call_variable",
+                                    "name": "validators"
+                                },
+                                "item": {
+                                    "type": "call_variable",
+                                    "name": "string_letter_starts_with"
+                                }
+                            }
+                        },
+                        {
+                            "type": "call",
                             "name": "ui_input_validate",
                             "inputs": {
                                 "input": {
