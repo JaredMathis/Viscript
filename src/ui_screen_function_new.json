@@ -46,6 +46,25 @@
                         "name": "ui_screen_home"
                     }
                 }
+            },
+            {
+                "type": "string",
+                "output": "function_name",
+                "value": "function_name"
+            },
+            {
+                "type": "call",
+                "name": "ui_input",
+                "inputs": {
+                    "parent": {
+                        "type": "call_variable",
+                        "name": "body"
+                    },
+                    "label": {
+                        "type": "call_variable",
+                        "name": "function_name"
+                    }
+                }
             }
         ]
     },
