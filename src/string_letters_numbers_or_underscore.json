@@ -1,0 +1,22 @@
+{
+    "type": "function",
+    "name": "string_letters_numbers_or_underscore",
+    "variables": [
+        {
+            "type": "function_variable",
+            "name": "input",
+            "input": true
+        },
+        {
+            "type": "function_variable",
+            "name": "result",
+            "input": true
+        }
+    ],
+    "root": {
+        "type": "code",
+        "value": "result=!!/^\\w+$/.test(input)"
+    },
+    "tests": [
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "type": "function",
+    "name": "list_add",
+    "variables": [
+        {
+            "type": "function_variable",
+            "name": "list",
+            "input": true
+        },
+        {
+            "type": "function_variable",
+            "name": "item",
+            "input": true
+        }
+    ],
+    "root": {
+        "type": "code",
+        "value": "list.push(item)"
+    },
+    "tests": [
+    ]
+}

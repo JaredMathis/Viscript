@@ -1,0 +1,17 @@
+{
+    "type": "function",
+    "name": "list_new",
+    "variables": [
+        {
+            "type": "function_variable",
+            "name": "list",
+            "input": true
+        }
+    ],
+    "root": {
+        "type": "code",
+        "value": "list=[]"
+    },
+    "tests": [
+    ]
+}
