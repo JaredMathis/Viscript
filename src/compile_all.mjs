@@ -1,4 +1,4 @@
-import { file_json_open } from "./common.js";
+import { file_json_open } from "./common.mjs";
 import { compile } from "./compile.mjs";
 
 let parsed = await file_json_open('./src/add.json')
