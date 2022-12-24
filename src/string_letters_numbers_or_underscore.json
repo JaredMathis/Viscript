@@ -1,6 +1,6 @@
 {
     "type": "function",
-    "name": "string_letters_numbers_or_underscore",
+    "name": "string_letters_numbers_or_underscores",
     "variables": [
         {
             "type": "function_variable",

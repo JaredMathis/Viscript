@@ -81,7 +81,8 @@ export async function load(file_get) {
         "ui_button",
         "property_set",
         "property_get",
-        "print"
+        "print",
+        "string_letters_numbers_or_underscores",
     ];
     let parseds = [];
     for (let f of files) {
