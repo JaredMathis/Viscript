@@ -41,6 +41,9 @@ export function letters_all_generic(s, lambda) {
     }
     return true;
 }
+export function eval_global(s) {
+    return (1, eval)(s);
+}
 export function letters_all(s) {
     return letters_all_generic(s, letter_is);
 }
@@ -67,5 +70,5 @@ export function letters_or_digits_or_underscore_all(s) {
     return letters_all_generic(s, letter_or_digit_or_underscore_is);
 }
 export function identifier_is(s) {
-    return letters_all(s[0]) && letters_or_digits_or_underscore_all(s.slice(1));
+    return letters_all(s[0]) && letters_or_digits_or_underscore_all(s);
 }

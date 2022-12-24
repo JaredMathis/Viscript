@@ -1,5 +1,4 @@
-import { assert } from "console";
-import { digit_is, identifier_is, letters_all_generic, string_is } from "./common.mjs";
+import { assert, digit_is, identifier_is, letters_all_generic, string_is } from "./common.mjs";
 
 export function compile(parsed) {
     return compile_function(parsed);
