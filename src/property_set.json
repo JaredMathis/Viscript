@@ -1,0 +1,32 @@
+{
+    "type": "function",
+    "name": "property_set",
+    "variables": [
+        {
+            "type": "function_variable",
+            "name": "object",
+            "input": true
+        },
+        {
+            "type": "function_variable",
+            "name": "property_name",
+            "input": true
+        },
+        {
+            "type": "function_variable",
+            "name": "value",
+            "input": true
+        }
+    ],
+    "root": {
+        "type": "steps",
+        "value": [
+            {
+                "type": "code",
+                "value": "object[property_name]=value"
+            }
+        ]
+    },
+    "tests": [
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "type": "function",
+    "name": "ui_element_text",
+    "variables": [
+        {
+            "type": "function_variable",
+            "name": "element",
+            "input": true
+        },
+        {
+            "type": "function_variable",
+            "name": "text",
+            "input": true
+        }
+    ],
+    "root": {
+        "type": "steps",
+        "value": [
+            {
+                "type": "call",
+                "name": "property_set",
+                "inputs": {
+                    "object": {
+                        "type": "call_variable",
+                        "name": "element"
+                    },
+                    "property_name": {
+                        "type": "call_variable",
+                        "name": "innerHTML"
+                    },
+                    "value": {
+                        "type": "call_variable",
+                        "name": "text"
+                    }
+                }
+            }
+        ]
+    },
+    "tests": [
+    ]
+}
