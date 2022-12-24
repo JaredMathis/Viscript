@@ -30,17 +30,17 @@
             "type": "test",
             "inputs": {
                 "a": {
-                    "type": "call",
+                    "type": "test_variable",
                     "name": "number_1"
                 },
                 "b": {
-                    "type": "call",
+                    "type": "test_variable",
                     "name": "number_2"
                 }
             },
             "outputs": {
                 "c": {
-                    "type": "call",
+                    "type": "test_variable",
                     "name": "number_3"
                 }
             }
