@@ -132,6 +132,11 @@
                                 "type": "steps",
                                 "value": [
                                     {
+                                        "type": "string",
+                                        "output": "name",
+                                        "value": "name"
+                                    },
+                                    {
                                         "type": "call",
                                         "name": "property_get",
                                         "inputs": {
@@ -145,7 +150,7 @@
                                             }
                                         },
                                         "outputs": {
-                                            "object": {
+                                            "property_value": {
                                                 "type": "call_variable",
                                                 "name": "message"
                                             }
