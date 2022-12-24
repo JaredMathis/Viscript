@@ -23,7 +23,7 @@
             },
             {
                 "type": "code",
-                "value": "element.addEventListener(string_click, on_click)"
+                "value": "element.addEventListener(string_click,on_click)"
             }
         ]
     },
