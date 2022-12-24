@@ -52,6 +52,34 @@
                         "name": "style_value"
                     }
                 }
+            },
+            {
+                "type": "string",
+                "output": "style_name2",
+                "value": "font-family"
+            },
+            {
+                "type": "string",
+                "output": "style_value2",
+                "value": "monospace"
+            },
+            {
+                "type": "call",
+                "name": "ui_element_style",
+                "inputs": {
+                    "element": {
+                        "type": "call_variable",
+                        "name": "element"
+                    },
+                    "style_name": {
+                        "type": "call_variable",
+                        "name": "style_name2"
+                    },
+                    "style_value": {
+                        "type": "call_variable",
+                        "name": "style_value2"
+                    }
+                }
             }
         ]
     },
