@@ -9,18 +9,62 @@
         },
         {
             "type": "function_variable",
-            "name": "label",
+            "name": "label_text",
             "input": true
         },
         {
             "type": "function_variable",
             "name": "input",
             "output": true
+        },
+        {
+            "type": "function_variable",
+            "name": "label",
+            "output": true
         }
     ],
     "root": {
         "type": "steps",
         "value": [
+            {
+                "type": "string",
+                "output": "label_element_type",
+                "value": "label"
+            },
+            {
+                "type": "call",
+                "name": "ui_element",
+                "inputs": {
+                    "parent": {
+                        "type": "call_variable",
+                        "name": "parent"
+                    },
+                    "element_type": {
+                        "type": "call_variable",
+                        "name": "label_element_type"
+                    }
+                },
+                "outputs": {
+                    "element": {
+                        "type": "call_variable",
+                        "name": "label"
+                    }
+                }
+            },
+            {
+                "type": "call",
+                "name": "ui_element_text",
+                "inputs": {
+                    "element": {
+                        "type": "call_variable",
+                        "name": "label"
+                    },
+                    "text": {
+                        "type": "call_variable",
+                        "name": "label_text"
+                    }
+                }
+            },
             {
                 "type": "string",
                 "output": "element_type",

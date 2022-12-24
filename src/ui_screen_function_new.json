@@ -60,7 +60,7 @@
                         "type": "call_variable",
                         "name": "body"
                     },
-                    "label": {
+                    "label_text": {
                         "type": "call_variable",
                         "name": "function_name"
                     }
