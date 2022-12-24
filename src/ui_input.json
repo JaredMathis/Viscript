@@ -86,7 +86,7 @@
                 "outputs": {
                     "element": {
                         "type": "call_variable",
-                        "name": "button"
+                        "name": "input"
                     }
                 }
             },
@@ -96,7 +96,7 @@
                 "inputs": {
                     "element": {
                         "type": "call_variable",
-                        "name": "button"
+                        "name": "input"
                     }
                 }
             }
