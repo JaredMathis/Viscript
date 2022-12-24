@@ -33,7 +33,7 @@
                         "type": "call_variable",
                         "name": "innerHTML"
                     },
-                    "value": {
+                    "property_value": {
                         "type": "call_variable",
                         "name": "text"
                     }

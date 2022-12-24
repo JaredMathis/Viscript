@@ -1,6 +1,6 @@
 {
     "type": "function",
-    "name": "property_set",
+    "name": "property_get",
     "variables": [
         {
             "type": "function_variable",
@@ -15,7 +15,7 @@
         {
             "type": "function_variable",
             "name": "property_value",
-            "input": true
+            "output": true
         }
     ],
     "root": {
@@ -23,7 +23,7 @@
         "value": [
             {
                 "type": "code",
-                "value": "object[property_name]=value"
+                "value": "value=object[property_name]"
             }
         ]
     },
