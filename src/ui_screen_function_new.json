@@ -65,6 +65,29 @@
                         "name": "function_name"
                     }
                 }
+            },
+            {
+                "type": "string",
+                "output": "create_text",
+                "value": "Create"
+            },
+            {
+                "type": "call",
+                "name": "ui_button",
+                "inputs": {
+                    "parent": {
+                        "type": "call_variable",
+                        "name": "body"
+                    },
+                    "text": {
+                        "type": "call_variable",
+                        "name": "create_text"
+                    },
+                    "on_click": {
+                        "type": "call_variable",
+                        "name": "ui_screen_empty"
+                    }
+                }
             }
         ]
     },
