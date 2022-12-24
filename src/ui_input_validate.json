@@ -37,7 +37,7 @@
                 "outputs": {
                     "list": {
                         "type": "call_variable",
-                        "name": "messages"
+                        "name": "validators"
                     },
                     "on_each": {
                         "type": "call_variable",
@@ -53,12 +53,96 @@
                         "type": "function_variable",
                         "name": "item",
                         "input": true
+                    },
+                    {
+                        "type": "function_variable",
+                        "name": "valid",
+                        "output": true
                     }
                 ],
                 "root": {
                     "type":"steps",
-                    "value":[
-                        
+                    "value": [
+                        {
+                            "type": "call",
+                            "name": "item",
+                            "inputs": {
+                                "input": {
+                                    "type": "call_variable",
+                                    "name": "input_value"
+                                }
+                            },
+                            "outputs": {
+                                "result": {
+                                    "type": "call_variable",
+                                    "name": "valid"
+                                }
+                            }
+                        },
+                        {
+                            "type": "call",
+                            "name": "if_else",
+                            "inputs": {
+                                "check": {
+                                    "type": "call_variable",
+                                    "name": "valid"
+                                },
+                                "on_else": {
+                                    "type": "call_variable",
+                                    "name": "ui_input_validate_each_else"
+                                }
+                            }
+                        },
+                        {
+                            "type": "function",
+                            "name": "ui_input_validate_each_else",
+                            "variables": [
+                                {
+                                    "type": "function_variable",
+                                    "name": "message",
+                                    "output": true
+                                }
+                            ],
+                            "root": {
+                                "type": "steps",
+                                "value": [
+                                    {
+                                        "type": "call",
+                                        "name": "property_get",
+                                        "inputs": {
+                                            "object": {
+                                                "type": "call_variable",
+                                                "name": "item"
+                                            },
+                                            "property_name": {
+                                                "type": "call_variable",
+                                                "name": "name"
+                                            }
+                                        },
+                                        "outputs": {
+                                            "object": {
+                                                "type": "call_variable",
+                                                "name": "message"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "type": "call",
+                                        "name": "list_add",
+                                        "inputs": {
+                                            "list": {
+                                                "type": "call_variable",
+                                                "name": "messages"
+                                            },
+                                            "item": {
+                                                "type": "call_variable",
+                                                "name": "message"
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        }
                     ]
                 }
             }

@@ -95,7 +95,7 @@ export async function load(file_get) {
         eval_global(compiled);
     }
     for (let parsed of parseds) {
-        for (let test of parsed.tests) {
+        for (let test of parsed.tests || []) {
             assert(test.type === 'test');
             let test_vars = {};
             for (let name in test.inputs) {
