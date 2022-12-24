@@ -65,6 +65,7 @@ export async function load(file_get) {
         "ui_main",
         "ui_element_text",
         "ui_element",
+        "ui_element_style",
         "ui_element_width_full",
         "ui_button",
         "property_set",

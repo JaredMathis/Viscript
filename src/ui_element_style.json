@@ -1,21 +1,29 @@
 {
     "type": "function",
-    "name": "ui_button",
+    "name": "ui_element_style",
     "variables": [
         {
             "type": "function_variable",
-            "name": "parent",
+            "name": "element",
             "input": true
         },
         {
             "type": "function_variable",
-            "name": "text",
+            "name": "style_name",
             "input": true
         },
         {
             "type": "function_variable",
-            "name": "button",
-            "output": true
+            "name": "style_value",
+            "input": true
+        },
+        {
+            "type": "function_variable",
+            "name": "string_style"
+        },
+        {
+            "type": "function_variable",
+            "name": "element_style"
         }
     ],
     "root": {
@@ -23,50 +31,44 @@
         "value": [
             {
                 "type": "string",
-                "output": "element_type",
-                "value": "button"
+                "output": "string_style",
+                "value": "style"
             },
             {
                 "type": "call",
-                "name": "ui_element",
+                "name": "property_get",
                 "inputs": {
-                    "parent": {
+                    "object": {
                         "type": "call_variable",
-                        "name": "parent"
+                        "name": "element"
                     },
-                    "element_type": {
+                    "property_name": {
                         "type": "call_variable",
-                        "name": "element_type"
+                        "name": "string_style"
                     }
                 },
                 "outputs": {
-                    "element": {
+                    "property_value": {
                         "type": "call_variable",
-                        "name": "button"
+                        "name": "element_style"
                     }
                 }
             },
             {
                 "type": "call",
-                "name": "ui_element_text",
+                "name": "property_set",
                 "inputs": {
-                    "element": {
+                    "object": {
                         "type": "call_variable",
-                        "name": "button"
+                        "name": "element_style"
                     },
-                    "text": {
+                    "property_name": {
                         "type": "call_variable",
-                        "name": "text"
-                    }
-                }
-            },
-            {
-                "type": "call",
-                "name": "ui_element_width_full",
-                "inputs": {
-                    "element": {
+                        "name": "style_name"
+                    },
+                    "property_value": {
                         "type": "call_variable",
-                        "name": "button"
+                        "name": "style_value"
                     }
                 }
             }

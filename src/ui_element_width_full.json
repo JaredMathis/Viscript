@@ -6,24 +6,6 @@
             "type": "function_variable",
             "name": "element",
             "input": true
-        },
-        {
-            "type": "function_variable",
-            "name": "style_name",
-            "input": true
-        },
-        {
-            "type": "function_variable",
-            "name": "style_value",
-            "input": true
-        },
-        {
-            "type": "function_variable",
-            "name": "string_style"
-        },
-        {
-            "type": "function_variable",
-            "name": "element_style"
         }
     ],
     "root": {
@@ -31,44 +13,29 @@
         "value": [
             {
                 "type": "string",
-                "output": "string_style",
-                "value": "style"
+                "output": "width",
+                "value": "width"
+            },
+            {
+                "type": "string",
+                "output": "percent",
+                "value": "100%"
             },
             {
                 "type": "call",
-                "name": "property_get",
+                "name": "ui_element_style",
                 "inputs": {
-                    "object": {
+                    "element": {
                         "type": "call_variable",
                         "name": "element"
                     },
-                    "property_name": {
+                    "style_name": {
                         "type": "call_variable",
-                        "name": "string_style"
-                    }
-                },
-                "outputs": {
-                    "property_value": {
-                        "type": "call_variable",
-                        "name": "element_style"
-                    }
-                }
-            },
-            {
-                "type": "call",
-                "name": "property_set",
-                "inputs": {
-                    "object": {
-                        "type": "call_variable",
-                        "name": "element_style"
+                        "name": "width"
                     },
-                    "property_name": {
+                    "style_value": {
                         "type": "call_variable",
-                        "name": "style_name"
-                    },
-                    "value": {
-                        "type": "call_variable",
-                        "name": "style_value"
+                        "name": "percent"
                     }
                 }
             }
