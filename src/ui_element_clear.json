@@ -1,6 +1,6 @@
 {
     "type": "function",
-    "name": "ui_element",
+    "name": "ui_element_clear",
     "variables": [
         {
             "type": "function_variable",

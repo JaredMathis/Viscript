@@ -23,7 +23,7 @@
             },
             {
                 "type": "call",
-                "name": "ui_document_body_get",
+                "name": "ui_screen_new",
                 "outputs": {
                     "document_body": {
                         "type": "call_variable",

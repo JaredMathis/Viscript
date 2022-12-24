@@ -73,6 +73,7 @@ export async function load(file_get) {
         "ui_element_width_full",
         "ui_screen_empty",
         "ui_screen_home",
+        "ui_screen_new",
         "ui_button",
         "property_set",
         "property_get",

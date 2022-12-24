@@ -1,11 +1,12 @@
 {
     "type": "function",
-    "name": "ui_screen_empty",
+    "name": "ui_screen_new",
     "variables": [
         {
             "type": "function_variable",
-            "name": "body",
-            "variable_type": "any"
+            "name": "document_body",
+            "variable_type": "any",
+            "output": true
         },
         {
             "type": "function_variable",
@@ -17,31 +18,22 @@
         "type": "steps",
         "value": [
             {
-                "type": "string",
-                "output": "text",
-                "value": "Empty Screen"
-            },
-            {
                 "type": "call",
-                "name": "ui_screen_new",
+                "name": "ui_document_body_get",
                 "outputs": {
                     "document_body": {
                         "type": "call_variable",
-                        "name": "body"
+                        "name": "document_body"
                     }
                 }
             },
             {
                 "type": "call",
-                "name": "ui_text",
+                "name": "ui_element_clear",
                 "inputs": {
-                    "parent": {
+                    "element": {
                         "type": "call_variable",
-                        "name": "body"
-                    },
-                    "text": {
-                        "type": "call_variable",
-                        "name": "text"
+                        "name": "document_body"
                     }
                 }
             }
