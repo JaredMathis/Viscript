@@ -4,13 +4,11 @@
     "variables": [
         {
             "type": "function_variable",
-            "name": "body",
-            "variable_type": "any"
+            "name": "body"
         },
         {
             "type": "function_variable",
-            "name": "back_text",
-            "variable_type": "string"
+            "name": "back_text"
         }
     ],
     "root": {

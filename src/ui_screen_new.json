@@ -5,13 +5,11 @@
         {
             "type": "function_variable",
             "name": "document_body",
-            "variable_type": "any",
             "output": true
         },
         {
             "type": "function_variable",
-            "name": "text",
-            "variable_type": "string"
+            "name": "text"
         }
     ],
     "root": {

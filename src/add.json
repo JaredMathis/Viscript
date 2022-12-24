@@ -5,19 +5,16 @@
         {
             "type": "function_variable",
             "name": "a",
-            "variable_type": "number",
             "input": true
         },
         {
             "type": "function_variable",
             "name": "b",
-            "variable_type": "number",
             "input": true
         },
         {
             "type": "function_variable",
             "name": "c",
-            "variable_type": "number",
             "output": true
         }
     ],
