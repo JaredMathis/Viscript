@@ -10,7 +10,7 @@
         {
             "type": "function_variable",
             "name": "result",
-            "input": true
+            "output": true
         }
     ],
     "root": {
