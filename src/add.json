@@ -1,0 +1,49 @@
+{
+    "type": "function",
+    "name": "add",
+    "variables": [
+        {
+            "type": "function_variable",
+            "name": "a",
+            "variable_type": "number",
+            "input": true
+        },
+        {
+            "type": "function_variable",
+            "name": "b",
+            "variable_type": "number",
+            "input": true
+        },
+        {
+            "type": "function_variable",
+            "name": "c",
+            "variable_type": "number",
+            "output": true
+        }
+    ],
+    "root": {
+        "type": "code",
+        "value": "c=a+b"
+    },
+    "tests": [
+        {
+            "type": "test",
+            "inputs": {
+                "a": {
+                    "type": "call",
+                    "name": "number_1"
+                },
+                "b": {
+                    "type": "call",
+                    "name": "number_2"
+                }
+            },
+            "outputs": {
+                "c": {
+                    "type": "call",
+                    "name": "number_3"
+                }
+            }
+        }
+    ]
+}
