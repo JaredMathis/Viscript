@@ -53,6 +53,29 @@
             },
             {
                 "type": "string",
+                "output": "create_text",
+                "value": "Create"
+            },
+            {
+                "type": "call",
+                "name": "ui_button",
+                "inputs": {
+                    "parent": {
+                        "type": "call_variable",
+                        "name": "body"
+                    },
+                    "text": {
+                        "type": "call_variable",
+                        "name": "create_text"
+                    },
+                    "on_click": {
+                        "type": "call_variable",
+                        "name": "ui_screen_function_new_create"
+                    }
+                }
+            },
+            {
+                "type": "string",
                 "output": "function_name",
                 "value": "function_name"
             },
@@ -73,29 +96,6 @@
                     "input": {
                         "type": "call_variable",
                         "name": "input"
-                    }
-                }
-            },
-            {
-                "type": "string",
-                "output": "create_text",
-                "value": "Create"
-            },
-            {
-                "type": "call",
-                "name": "ui_button",
-                "inputs": {
-                    "parent": {
-                        "type": "call_variable",
-                        "name": "body"
-                    },
-                    "text": {
-                        "type": "call_variable",
-                        "name": "create_text"
-                    },
-                    "on_click": {
-                        "type": "call_variable",
-                        "name": "ui_screen_function_new_create"
                     }
                 }
             },
