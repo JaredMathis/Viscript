@@ -1,4 +1,4 @@
-import { assert, eval_global, file_json_open, identifier_is, list_first as list_single } from "./common.mjs";
+import { assert, eval_global, file_json_open, identifier_is, list_single } from "./common.mjs";
 import { compile } from "./compile.mjs";
 
 let files = ['add', 'number_1', 'number_2', 'number_3'];

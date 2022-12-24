@@ -15,7 +15,7 @@ export function assert(condition) {
         throw new Error('Expecting true')
     }
 }
-export function list_first(list) {
+export function list_single(list) {
     assert(list.length === 1);
     return list[0]
 }
