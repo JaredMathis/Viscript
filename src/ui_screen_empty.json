@@ -1,0 +1,52 @@
+{
+    "type": "function",
+    "name": "ui_screen_empty",
+    "variables": [
+        {
+            "type": "function_variable",
+            "name": "body",
+            "variable_type": "any"
+        },
+        {
+            "type": "function_variable",
+            "name": "text",
+            "variable_type": "string"
+        }
+    ],
+    "root": {
+        "type": "steps",
+        "value": [
+            {
+                "type": "string",
+                "output": "text",
+                "value": "Empty Screen"
+            },
+            {
+                "type": "call",
+                "name": "ui_document_body_get",
+                "outputs": {
+                    "document_body": {
+                        "type": "call_variable",
+                        "name": "body"
+                    }
+                }
+            },
+            {
+                "type": "call",
+                "name": "ui_text",
+                "inputs": {
+                    "parent": {
+                        "type": "call_variable",
+                        "name": "body"
+                    },
+                    "text": {
+                        "type": "call_variable",
+                        "name": "text"
+                    }
+                }
+            }
+        ]
+    },
+    "tests": [
+    ]
+}

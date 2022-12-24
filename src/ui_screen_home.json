@@ -45,7 +45,7 @@
                     },
                     "on_click": {
                         "type": "call_variable",
-                        "name": "new_function_on_click"
+                        "name": "ui_screen_empty"
                     }
                 }
             },
