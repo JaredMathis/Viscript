@@ -9,14 +9,16 @@ function compile_function(parsed) {
     assert(parsed.type === 'function');
     assert(identifier_is(parsed.name));
 
+    let vars_dot = "vars.";
     return `
 function ${parsed.name}(vars) {
     let ${parsed.variables.map(v => v.name).join(", ")};
-    ${compile_function_variables_assign('input')};
+    ${compile_function_variables_assign('input', '', vars_dot)};
+    ${compile_function_variables_assign('output', vars_dot, '')};
 }`
 
-    function compile_function_variables_assign(filter) {
-        return parsed.variables.filter(v => v[filter]).map(v => v.name).map(v => `${v} = vars.${v}`).join(", ")
+    function compile_function_variables_assign(filter, prefix1, prefix2) {
+        return parsed.variables.filter(v => v[filter]).map(v => v.name).map(v => `${prefix1}${v} = ${prefix2}${v}`).join(", ")
     }
 }
 
