@@ -12,11 +12,11 @@ function compile_function(parsed) {
     return `
 function ${parsed.name}(vars) {
     let ${parsed.variables.map(v => v.name).join(", ")};
-    ${compile_function_variables_assign()};
+    ${compile_function_variables_assign('input')};
 }`
 
     function compile_function_variables_assign(filter) {
-        return parsed.variables.filter(v => v['input']).map(v => v.name).map(v => `${v} = vars.${v}`).join(", ")
+        return parsed.variables.filter(v => v[filter]).map(v => v.name).map(v => `${v} = vars.${v}`).join(", ")
     }
 }
 
