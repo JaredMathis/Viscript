@@ -24,6 +24,34 @@
             {
                 "type": "code",
                 "value": "element=document.createElement(element_type);\nparent.appendChild(element)"
+            },
+            {
+                "type": "string",
+                "output": "style_name",
+                "value": "font-size"
+            },
+            {
+                "type": "string",
+                "output": "style_value",
+                "value": "4vh"
+            },
+            {
+                "type": "call",
+                "name": "ui_element_style",
+                "inputs": {
+                    "element": {
+                        "type": "call_variable",
+                        "name": "element"
+                    },
+                    "style_name": {
+                        "type": "call_variable",
+                        "name": "style_name"
+                    },
+                    "style_value": {
+                        "type": "call_variable",
+                        "name": "style_value"
+                    }
+                }
             }
         ]
     },
