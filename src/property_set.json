@@ -23,7 +23,7 @@
         "value": [
             {
                 "type": "code",
-                "value": "object[property_name]=value"
+                "value": "object[property_name]=property_value"
             }
         ]
     },
