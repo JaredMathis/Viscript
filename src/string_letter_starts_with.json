@@ -1,0 +1,22 @@
+{
+    "type": "function",
+    "name": "string_letter_starts_with",
+    "variables": [
+        {
+            "type": "function_variable",
+            "name": "input",
+            "input": true
+        },
+        {
+            "type": "function_variable",
+            "name": "result",
+            "input": true
+        }
+    ],
+    "root": {
+        "type": "code",
+        "value": "result=!!/^[a-zA-Z]/.test(input)"
+    },
+    "tests": [
+    ]
+}

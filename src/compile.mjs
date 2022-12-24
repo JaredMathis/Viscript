@@ -71,6 +71,7 @@ export async function load(file_get) {
         "ui_element",
         "ui_text",
         "ui_input",
+        "ui_input_validate",
         "ui_element_style",
         "ui_element_on_click",
         "ui_element_width_full",
@@ -83,6 +84,7 @@ export async function load(file_get) {
         "property_get",
         "print",
         "string_letters_numbers_or_underscores",
+        "string_letter_starts_with",
     ];
     let parseds = [];
     for (let f of files) {

@@ -5,7 +5,7 @@
         {
             "type": "function_variable",
             "name": "list",
-            "input": true
+            "output": true
         }
     ],
     "root": {

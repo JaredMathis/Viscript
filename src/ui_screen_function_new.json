@@ -127,6 +127,16 @@
                         },
                         {
                             "type": "call",
+                            "name": "print",
+                            "inputs": {
+                                "value": {
+                                    "type": "call_variable",
+                                    "name": "validators"
+                                }
+                            }
+                        },
+                        {
+                            "type": "call",
                             "name": "list_add",
                             "inputs": {
                                 "list": {
