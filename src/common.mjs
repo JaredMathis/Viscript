@@ -9,4 +9,9 @@ export function json_parse(unparsed) {
 export async function file_json_open(file_path) {
     let unparsed = await file_open(file_path);
     return json_parse(unparsed);
+}    
+export function assert(condition) {
+    if (condition !== true) {
+        throw new Error('Expecting true')
+    }
 }

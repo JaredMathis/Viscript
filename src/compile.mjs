@@ -1,10 +1,10 @@
-export function compile(parsed) {
-    assert(parsed.type === 'function');
+import { assert } from "console";
 
-    function assert(condition) {
-        if (condition !== true) {
-            throw new Error('Expecting true')
-        }
-    }
+export function compile(parsed) {
+    return compile_function(parsed);
+}
+
+function compile_function(parsed) {
+    assert(parsed.type === 'function');
 }
 
