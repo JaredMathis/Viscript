@@ -38,7 +38,7 @@
             },
             {
                 "type": "call",
-                "name": "ui_element",
+                "name": "ui_element_width_full_with_text",
                 "inputs": {
                     "parent": {
                         "type": "call_variable",
@@ -47,26 +47,16 @@
                     "element_type": {
                         "type": "call_variable",
                         "name": "label_element_type"
+                    },
+                    "text": {
+                        "type": "call_variable",
+                        "name": "label_text"
                     }
                 },
                 "outputs": {
                     "element": {
                         "type": "call_variable",
                         "name": "label"
-                    }
-                }
-            },
-            {
-                "type": "call",
-                "name": "ui_element_text",
-                "inputs": {
-                    "element": {
-                        "type": "call_variable",
-                        "name": "label"
-                    },
-                    "text": {
-                        "type": "call_variable",
-                        "name": "label_text"
                     }
                 }
             },
@@ -117,6 +107,34 @@
                     "element": {
                         "type": "call_variable",
                         "name": "errors"
+                    }
+                }
+            },
+            {
+                "type": "string",
+                "output": "style_name",
+                "value": "color"
+            },
+            {
+                "type": "string",
+                "output": "style_value",
+                "value": "red"
+            },
+            {
+                "type": "call",
+                "name": "ui_element_style",
+                "inputs": {
+                    "element": {
+                        "type": "call_variable",
+                        "name": "errors"
+                    },
+                    "style_name": {
+                        "type": "call_variable",
+                        "name": "style_name"
+                    },
+                    "style_value": {
+                        "type": "call_variable",
+                        "name": "style_value"
                     }
                 }
             }

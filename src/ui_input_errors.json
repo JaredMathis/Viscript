@@ -17,7 +17,45 @@
         "type":"steps",
         "value": [
             {
+                "type": "call",
+                "name": "ui_element_clear",
+                "inputs": {
+                    "element": {
+                        "type": "call_variable",
+                        "name": "errors"
+                    }
+                }
+            },
+            {
+                "type": "call",
+                "name": "for_each",
+                "inputs": {
+                    "list": {
+                        "type": "call_variable",
+                        "name": "error_list"
+                    },
+                    "on_each": {
+                        "type": "call_variable",
+                        "name": "ui_input_errors_each"
+                    }
+                }
+            },
+            {
+                "type": "function",
+                "name": "ui_input_errors_each",
+                "variables": [
+                    {
+                        "type": "function_variable",
+                        "name": "item",
+                        "input": true
+                    }
+                ],
+                "root": {
+                    "type": "steps",
+                    "value": [
 
+                    ]
+                }
             }
         ]
     }

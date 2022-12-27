@@ -1,10 +1,15 @@
 {
     "type": "function",
-    "name": "ui_text",
+    "name": "ui_element_width_full_with_text",
     "variables": [
         {
             "type": "function_variable",
             "name": "parent",
+            "input": true
+        },
+        {
+            "type": "function_variable",
+            "name": "element_type",
             "input": true
         },
         {
@@ -21,11 +26,6 @@
     "root": {
         "type": "steps",
         "value": [
-            {
-                "type": "string",
-                "output": "element_type",
-                "value": "div"
-            },
             {
                 "type": "call",
                 "name": "ui_element_width_full_with",
