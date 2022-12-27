@@ -53,6 +53,16 @@
             },
             {
                 "type": "call",
+                "name": "ui_element_width_full",
+                "inputs": {
+                    "element": {
+                        "type": "call_variable",
+                        "name": "button"
+                    }
+                }
+            },
+            {
+                "type": "call",
                 "name": "ui_element_text",
                 "inputs": {
                     "element": {
@@ -62,16 +72,6 @@
                     "text": {
                         "type": "call_variable",
                         "name": "text"
-                    }
-                }
-            },
-            {
-                "type": "call",
-                "name": "ui_element_width_full",
-                "inputs": {
-                    "element": {
-                        "type": "call_variable",
-                        "name": "button"
                     }
                 }
             },
