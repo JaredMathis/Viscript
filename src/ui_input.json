@@ -21,6 +21,11 @@
             "type": "function_variable",
             "name": "label",
             "output": true
+        },
+        {
+            "type": "function_variable",
+            "name": "error",
+            "output": true
         }
     ],
     "root": {
@@ -97,6 +102,41 @@
                     "element": {
                         "type": "call_variable",
                         "name": "input"
+                    }
+                }
+            },
+            {
+                "type": "string",
+                "output": "error_element_type",
+                "value": "div"
+            },
+            {
+                "type": "call",
+                "name": "ui_element",
+                "inputs": {
+                    "parent": {
+                        "type": "call_variable",
+                        "name": "parent"
+                    },
+                    "element_type": {
+                        "type": "call_variable",
+                        "name": "error_element_type"
+                    }
+                },
+                "outputs": {
+                    "element": {
+                        "type": "call_variable",
+                        "name": "error"
+                    }
+                }
+            },
+            {
+                "type": "call",
+                "name": "ui_element_width_full",
+                "inputs": {
+                    "element": {
+                        "type": "call_variable",
+                        "name": "error"
                     }
                 }
             }
