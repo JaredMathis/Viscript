@@ -1,6 +1,6 @@
 {
     "type": "function",
-    "name": "ui_button",
+    "name": "ui_element_width_full_with",
     "variables": [
         {
             "type": "function_variable",
@@ -9,17 +9,12 @@
         },
         {
             "type": "function_variable",
-            "name": "text",
+            "name": "element_type",
             "input": true
         },
         {
             "type": "function_variable",
-            "name": "on_click",
-            "input": true
-        },
-        {
-            "type": "function_variable",
-            "name": "button",
+            "name": "element",
             "output": true
         }
     ],
@@ -27,13 +22,8 @@
         "type": "steps",
         "value": [
             {
-                "type": "string",
-                "output": "element_type",
-                "value": "button"
-            },
-            {
                 "type": "call",
-                "name": "ui_element_width_full_with",
+                "name": "ui_element",
                 "inputs": {
                     "parent": {
                         "type": "call_variable",
@@ -47,35 +37,17 @@
                 "outputs": {
                     "element": {
                         "type": "call_variable",
-                        "name": "button"
+                        "name": "element"
                     }
                 }
             },
             {
                 "type": "call",
-                "name": "ui_element_text",
+                "name": "ui_element_width_full",
                 "inputs": {
                     "element": {
                         "type": "call_variable",
-                        "name": "button"
-                    },
-                    "text": {
-                        "type": "call_variable",
-                        "name": "text"
-                    }
-                }
-            },
-            {
-                "type": "call",
-                "name": "ui_element_on_click",
-                "inputs": {
-                    "element": {
-                        "type": "call_variable",
-                        "name": "button"
-                    },
-                    "on_click": {
-                        "type": "call_variable",
-                        "name": "on_click"
+                        "name": "element"
                     }
                 }
             }

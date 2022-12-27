@@ -77,6 +77,7 @@ export async function load(file_get) {
         "ui_element_style",
         "ui_element_on_click",
         "ui_element_width_full",
+        "ui_element_width_full_with",
         "ui_screen_empty",
         "ui_screen_home",
         "ui_screen_new",

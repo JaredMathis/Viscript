@@ -77,7 +77,7 @@
             },
             {
                 "type": "call",
-                "name": "ui_element",
+                "name": "ui_element_width_full_with",
                 "inputs": {
                     "parent": {
                         "type": "call_variable",
@@ -96,23 +96,13 @@
                 }
             },
             {
-                "type": "call",
-                "name": "ui_element_width_full",
-                "inputs": {
-                    "element": {
-                        "type": "call_variable",
-                        "name": "input"
-                    }
-                }
-            },
-            {
                 "type": "string",
                 "output": "error_element_type",
                 "value": "div"
             },
             {
                 "type": "call",
-                "name": "ui_element",
+                "name": "ui_element_width_full_with",
                 "inputs": {
                     "parent": {
                         "type": "call_variable",
@@ -124,16 +114,6 @@
                     }
                 },
                 "outputs": {
-                    "element": {
-                        "type": "call_variable",
-                        "name": "error"
-                    }
-                }
-            },
-            {
-                "type": "call",
-                "name": "ui_element_width_full",
-                "inputs": {
                     "element": {
                         "type": "call_variable",
                         "name": "error"
