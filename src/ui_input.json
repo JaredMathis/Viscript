@@ -24,7 +24,7 @@
         },
         {
             "type": "function_variable",
-            "name": "error",
+            "name": "errors",
             "output": true
         }
     ],
@@ -116,7 +116,7 @@
                 "outputs": {
                     "element": {
                         "type": "call_variable",
-                        "name": "error"
+                        "name": "errors"
                     }
                 }
             }

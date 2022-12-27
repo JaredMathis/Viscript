@@ -96,6 +96,10 @@
                     "input": {
                         "type": "call_variable",
                         "name": "input"
+                    },
+                    "errors": {
+                        "type": "call_variable",
+                        "name": "input_errors"
                     }
                 }
             },
