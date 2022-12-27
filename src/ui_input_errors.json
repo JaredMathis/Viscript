@@ -1,5 +1,6 @@
 {
     "type": "function",
+    "name": "ui_input_errors",
     "variables": [
         {
             "type": "function_variable",
@@ -11,5 +12,13 @@
             "name": "error_list",
             "input": true
         }
-    ]
+    ],
+    "root": {
+        "type":"steps",
+        "value": [
+            {
+
+            }
+        ]
+    }
 }
