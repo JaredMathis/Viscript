@@ -1,0 +1,15 @@
+{
+    "type": "function",
+    "variables": [
+        {
+            "type": "function_variable",
+            "name": "errors",
+            "input": true
+        },
+        {
+            "type": "function_variable",
+            "name": "error_list",
+            "input": true
+        }
+    ]
+}
