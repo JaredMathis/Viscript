@@ -8,10 +8,14 @@ function compile_function(parsed) {
     assert(parsed.type === 'function');
     assert(identifier_is(parsed.name));
 
+    if (!parsed.variables) {
+        parsed.variables = []
+    }
+
     let vars_dot = "vars.";
     return `
 async function ${parsed.name}(vars) {
-    ${parsed.variables.length ? "let" : ""} ${parsed.variables.map(v => v.name).join(", ")};
+    ${(parsed.variables).length ? "let" : ""} ${parsed.variables.map(v => v.name).join(", ")};
     ${compile_function_variables_assign(parsed.variables, 'input', '', vars_dot)};
     let _call;
     ${compile_function_root(parsed.root)};
@@ -73,6 +77,7 @@ export async function load(file_get) {
         "ui_element",
         "ui_text",
         "ui_input",
+        "ui_input_errors",
         "ui_input_validate",
         "ui_element_style",
         "ui_element_on_click",
@@ -84,6 +89,8 @@ export async function load(file_get) {
         "ui_screen_new",
         "ui_screen_function_new",
         "ui_button",
+        "ui_validator_string_letters_numbers_or_underscores",
+        "ui_validator_string_letter_starts_with",
         "property_set",
         "property_get",
         "print",

@@ -53,7 +53,20 @@
                 "root": {
                     "type": "steps",
                     "value": [
-
+                        {
+                            "type": "call",
+                            "name": "ui_text",
+                            "inputs": {
+                                "parent": {
+                                    "type": "call_variable",
+                                    "name": "errors"
+                                },
+                                "text": {
+                                    "type": "call_variable",
+                                    "name": "item"
+                                }
+                            }
+                        }
                     ]
                 }
             }

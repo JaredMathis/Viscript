@@ -139,7 +139,7 @@
                                 },
                                 "item": {
                                     "type": "call_variable",
-                                    "name": "string_letters_numbers_or_underscores"
+                                    "name": "ui_validator_string_letters_numbers_or_underscores"
                                 }
                             }
                         },
@@ -153,7 +153,7 @@
                                 },
                                 "item": {
                                     "type": "call_variable",
-                                    "name": "string_letter_starts_with"
+                                    "name": "ui_validator_string_letter_starts_with"
                                 }
                             }
                         },
@@ -179,9 +179,13 @@
                         },
                         {
                             "type": "call",
-                            "name": "print",
+                            "name": "ui_input_errors",
                             "inputs": {
-                                "value": {
+                                "errors": {
+                                    "type": "call_variable",
+                                    "name": "input_errors"
+                                },
+                                "error_list": {
                                     "type": "call_variable",
                                     "name": "create_validation"
                                 }

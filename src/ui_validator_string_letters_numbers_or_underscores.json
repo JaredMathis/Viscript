@@ -1,0 +1,65 @@
+{
+    "type": "function",
+    "name": "ui_validator_string_letters_numbers_or_underscores",
+    "variables": [
+        {
+            "type": "function_variable",
+            "name": "input",
+            "input": true
+        },
+        {
+            "type": "function_variable",
+            "name": "result",
+            "output": true
+        },
+        {
+            "type": "function_variable",
+            "name": "message",
+            "output": true
+        }
+    ],
+    "root": {
+        "type": "steps",
+        "value": [
+            {
+                "type": "call",
+                "name": "string_letters_numbers_or_underscores",
+                "inputs": {
+                    "input": {
+                        "type": "call_variable",
+                        "name": "input"
+                    }
+                },
+                "outputs": {
+                    "result": {
+                        "type": "call_variable",
+                        "name": "result"
+                    }
+                }
+            },
+            {
+                "type": "call",
+                "name": "if_else",
+                "inputs": {
+                    "check": {
+                        "type": "call_variable",
+                        "name": "result"
+                    },
+                    "on_else": {
+                        "type": "call_variable",
+                        "name": "ui_validator_string_letters_numbers_or_underscores_else"
+                    }
+                }
+            },
+            {
+                "type":"function",
+                "name": "ui_validator_string_letters_numbers_or_underscores_else",
+                "root": {
+                    "type": "string",
+                    "output": "message",
+                    "value": "Must be letters, numbers or underscores, only"
+                }
+            }
+        ]
+    }
+}
