@@ -88,6 +88,7 @@ export async function load(file_get) {
         "ui_screen_home",
         "ui_screen_new",
         "ui_screen_function_new",
+        "ui_screen_function_open",
         "ui_button",
         "ui_validator_string_letters_numbers_or_underscores",
         "ui_validator_string_letter_starts_with",

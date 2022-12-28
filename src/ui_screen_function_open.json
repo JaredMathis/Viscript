@@ -1,0 +1,46 @@
+{
+    "type": "function",
+    "name": "ui_screen_function_open",
+    "variables": [
+    ],
+    "root": {
+        "type": "steps",
+        "value": [
+            {
+                "type": "call",
+                "name": "ui_screen_new",
+                "outputs": {
+                    "document_body": {
+                        "type": "call_variable",
+                        "name": "body"
+                    }
+                }
+            },
+            {
+                "type": "string",
+                "output": "back_text",
+                "value": "Back"
+            },
+            {
+                "type": "call",
+                "name": "ui_button",
+                "inputs": {
+                    "parent": {
+                        "type": "call_variable",
+                        "name": "body"
+                    },
+                    "text": {
+                        "type": "call_variable",
+                        "name": "back_text"
+                    },
+                    "on_click": {
+                        "type": "call_variable",
+                        "name": "ui_screen_home"
+                    }
+                }
+            }
+        ]
+    },
+    "tests": [
+    ]
+}
