@@ -102,6 +102,8 @@ export async function load(file_get) {
     for (let f of files) {
         let parsed = await file_get(f);
         parseds.push(parsed);
+    }
+    for (let parsed of parseds) {
         let compiled = compile(parsed);
         console.log(compiled);
         eval_global(compiled);
